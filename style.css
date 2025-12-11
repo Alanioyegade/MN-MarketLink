@@ -1,0 +1,47 @@
+:root{
+  --green:#2A9C9D;
+  --cream:#FFFDC4;
+  --orange:#F98441;
+}
+*{box-sizing:border-box}
+body{
+  font-family:system-ui,Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--green);
+  margin:0;
+  padding:18px;
+}
+header{background:var(--green); color:var(--cream); padding:18px; text-align:center; border-radius:8px}
+h1{margin:0; font-size:1.6rem}
+.controls{display:flex; gap:12px; align-items:center; margin:12px 0; flex-wrap:wrap}
+.search{display:flex; gap:8px; align-items:center}
+button{
+  background:var(--green);
+  color:var(--cream);
+  border:none;
+  padding:8px 12px;
+  margin:4px 0;
+  border-radius:8px;
+  cursor:pointer;
+  transition:transform .12s ease, background .12s;
+}
+button:hover{transform:translateY(-2px); background:var(--orange)}
+.list{display:flex; flex-direction:column; gap:8px; margin:8px 0}
+.card{
+  background:rgba(255,255,255,0.94);
+  border-left:6px solid var(--green);
+  padding:10px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+.card small{color:#666}
+#products .card{display:flex; justify-content:space-between; align-items:center; gap:12px}
+.product-meta{flex:1}
+.action-btn{background:var(--orange); color:var(--cream); padding:6px 10px; border-radius:6px; border:none; cursor:pointer}
+form input, form select{padding:8px; margin:6px 0; border-radius:6px; border:1px solid #ddd; width:100%}
+#orderResult{margin-top:8px}
+
+
+@media(min-width:800px){
+  main{max-width:900px; margin:0 auto}
+}
